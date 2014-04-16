@@ -14,6 +14,12 @@ To try this example app for yourself:
   7. Observe that `http://example-999.herokuapp.com/` looks like [this](http://openresty-heroku-example.herokuapp.com/).
   8. Wonder if you missed something, because that seems too easy.
 
+To run locally, follow the build instructions in this repository, then `$ mkdir logs` and
+
+    $ nginx -p `pwd` -c conf/openresty.conf
+
+Note that you may receive an `[alert]` about a missing `error.log` file -- this is OK, and the server should be running unless you also got an `[emerg]` or other category of fatal error.
+
 This is the source code of the app:
 ```
 daemon off;
