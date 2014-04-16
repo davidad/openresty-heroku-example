@@ -5,12 +5,14 @@ To try this example app for yourself:
   2. Get the [Heroku Toolbelt](https://toolbelt.heroku.com/) (easy to install)
   3. Clone this repository and `cd` into it:<br>
      `$ git clone https://github.com/davidad/openresty-heroku-example; cd openresty-heroku-example`
-  4. Think up a crazy app name that won't already be taken. I'll use `example-999` here, but that'll probably be taken, so pick some different numbers or something.<br>
+  4. Make sure you are logged in and have a correct SSH public key:
+     `$ heroku login && heroku keys:add`
+  5. Think up a crazy app name that won't already be taken. I'll use `example-999` here, but that'll probably be taken, so pick some different numbers or something.<br>
      `$ heroku create example-999 --buildpack=https://github.com/davidad/heroku-buildpack-openresty.git`
-  5. Deploy the app to Heroku.<br>
+  6. Deploy the app to Heroku.<br>
      `$ git push heroku master`
-  6. Observe that `http://example-999.herokuapp.com/` looks like [this](http://openresty-heroku-example.herokuapp.com/).
-  7. Wonder if you missed something, because that seems too easy.
+  7. Observe that `http://example-999.herokuapp.com/` looks like [this](http://openresty-heroku-example.herokuapp.com/).
+  8. Wonder if you missed something, because that seems too easy.
 
 This is the source code of the app:
 ```
